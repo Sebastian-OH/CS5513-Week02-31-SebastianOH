@@ -1,0 +1,26 @@
+[
+    {
+        "firstname":"Fred",
+        "lastname":"Smith",
+        "age":"65",
+        "favoriteColor":"Yellow"
+    },
+    {
+        "firstname":"James",
+        "lastname":"Brown",
+        "age":"41",
+        "favoriteColor":"Red"
+    },
+    {
+        "firstname":"Elle",
+        "lastname":"Thomson",
+        "age":"41",
+        "favoriteColor":"Red"
+    },
+    {
+        "firstname":"Allen",
+        "lastname":"West",
+        "age":"21",
+        "favoriteColor":"Blue"
+    }
+]

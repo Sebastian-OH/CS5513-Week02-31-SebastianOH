@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CS 55.13 Week Two</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script> 
+      <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>Hello Everybody!</h1>
+    <!-- <img src="https://static.vecteezy.com/system/resources/thumbnails/009/749/643/small_2x/woman-profile-mascot-illustration-female-avatar-character-icon-cartoon-girl-head-face-business-user-logo-free-vector.jpg" alt="text"/> -->
+    <div id="myApp"></div>
+    <script type="text/babel">
+      "use strict";
+    function PeopleInformation(infor) {
+        console.log(infor);
+        return (
+          <div>
+            {
+            infor.items.map(
+            (item,index) => (
+            <p key={index}> Your name is {item.firstname} {item.lastname}. Your age is {item.age}. Your favorite color is {item.favoriteColor}.</p>
+             )
+            )
+            }
+          </div>
+        );
+      }
+      $.getJSON(
+       "gfdjhd", 
+        function(jsonFromJquery) {
+        const myRoot = ReactDOM.createRoot( document.getElementById('myApp') );
+          myRoot.render(
+          <PeopleInformation items={jsonFromJquery} />
+          );
+        }
+      );
+      </script>
+  </body>
+</html>
+
+
+    <!-- <div id="myApp"></div>
+    <script type="text/babel">
+      "use strict";
+    function ProjectList(props) {
+        console.log(props);
+        return (
+          <div>
+            <ol>
+              {
+                props.list.map(
+                 (item,index) => (
+                  <li key={index}>
+                    <a href={item.link}>
+                      {item.firstname}
+                    </a>
+                  </li>
+                  )
+                )
+              }
+            </ol>
+          </div>
+        );
+      }
+      $.getJSON(
+       "gfdjhd", 
+        function(jsonFromJquery) {
+        const myRoot = ReactDOM.createRoot( document.getElementById('myApp') );
+          myRoot.render(
+          <ProjectList list={jsonFromJquery} />
+          );
+        }
+      );
+      </script>
+  </body>
+</html> -->
+<!-- [
+  {
+    "firstName": "John",
+    "favoriteColor": "Red"
+  },
+  {
+    "firstName": "Rosey",
+    "favoriteColor": "Blue"
+  },
+  {
+    "firstName": "John",
+    "favoriteColor": "Yellow"
+  }
+] -->
